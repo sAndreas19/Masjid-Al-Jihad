@@ -1,0 +1,216 @@
+/* ----------------- CSS Dasar ----------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: el messiri;
+    src: url(./assets/elmessiri/ElMessiri-Regular.ttf);
+}
+
+@font-face {
+    font-family: el messiri bold;
+    src: url(./assets/elmessiri/ElMessiri-Bold.ttf);
+}
+
+
+
+/* ----------------- Navbar ----------------- */
+
+nav {
+    padding: 25px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.left-nav .logo-left-nav {
+    width: 65px;
+}
+
+.left-nav ul {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-nav ul li {
+    display: inline-block;
+    list-style: none;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.left-nav ul li:hover {
+    transform: scale(1.2);
+}
+
+.left-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 21px;
+    position: relative;
+}
+
+.right-nav img {
+    width: 25px;
+    transition: 0.3s;
+}
+
+.right-nav img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* ----------------- Hero ----------------- */
+
+.hero-container {
+    background: url(../src/assets/hero/hero-background.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-row {
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title h1 {
+    font-size: 97px;
+    font-family: el messiri bold;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.hero-title h3 {
+    font-size: 41px;
+    font-weight: 300;
+    font-family: el messiri;
+    color: #FFFFFF;
+}
+
+
+
+/* ----------------- Jadwal Sholat ----------------- */
+
+.jadwal-sholat {
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    margin: auto;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    left: 20%;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0 0 21px 3px rgb(29, 29, 29);
+    height: fit-content;
+}
+
+.jadwal-sholat h3,h4,p {
+    font-family: el messiri;
+}
+
+.jadwal-sholat-title {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.jadwal-sholat-title h3 {
+    color: #0D4E14;
+    margin-bottom: 5px;
+}
+
+.jadwal-sholat-time {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+    width: 100%;
+    padding: 10px 10px;
+    /* background: linear-gradient(to right, #3CD363, #6bff90); */
+    /* justify-content: space-around; */
+    /* height: 130px; */
+    text-align: center;
+    align-items: center;
+}
+
+.jadwal-sholat-time-core {
+    padding: 30px;
+    box-shadow: 0 0 5px rgb(29, 29, 29);
+    border-radius: 10px;
+    min-width: 120px;
+    background: #FFFFFF;
+    color: #616161;
+    /* background: linear-gradient(to bottom, #3CD363, #30A34D); */
+}
+
+.jadwal-sholat-time-core.active {
+    background: linear-gradient(to bottom, #3CD363, #30A34D);
+    box-shadow: 0 0 7px rgb(29, 29, 29);
+    color: #FFFFFF;
+}
+
+
+
+/* ----------------- Location ----------------- */
+
+.location-container {
+    height: 100vh;
+    padding: 200px 0 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.location-google-maps {
+    background: url(../src/assets/location/location-background.png);
+    width: 965.5px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 130.1px;
+    border-radius: 20px;
+}
+
+.location-google-maps h1 {
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: el messiri;
+    line-height: 1;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.location-google-maps img {
+    max-width: 85px;
+    transition: 0.3s;
+}
+
+.location-google-maps img:hover {
+    transform: scale(1.1);
+}
+
