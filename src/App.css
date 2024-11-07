@@ -80,6 +80,171 @@ nav {
 
 
 
+/* ----------------- Login Admin ----------------- */
+
+.login-admin-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0 0 30px;
+}
+
+.login-admin-top h3 {
+    padding: 10px 20px;
+    background: #3CD363;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: 500;
+    box-shadow: 0 3px 5px 1px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-admin-top h3:hover {
+    transform: scale(1.1);
+}
+
+.login-admin-body {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #3CD363, #1bff54, #77ff00, #ccff13, #1bffb7);
+    background-size: 300% 300%;
+    animation: bg-color-rotate 10s linear infinite;
+    text-align: center;
+    align-items: center;
+}
+
+@keyframes bg-color-rotate {
+    0% {
+        background-position: 50% 0%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    75% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+
+.login-admin-container {
+    width: 470px;
+    margin: auto;
+    padding: 50px 30px;
+    background: rgba(97, 97, 97, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-admin-container h2 {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: el messiri;
+    font-size: 30px;
+}
+
+.login-admin-form-email,
+.login-admin-form-password {
+    margin-bottom: 15px;
+}
+
+.login-admin-form-email label,
+.login-admin-form-password label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #D7D7D7;
+    font-family: el messiri;
+}
+
+.login-admin-form-email input,
+.login-admin-form-password input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+}
+
+.login-admin-container p {
+    color: red;
+}
+
+.login-admin-form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3CD363;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.login-admin-form-button:hover {
+    background-color: #0D4E14;
+}
+
+.login-admin-hash {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(97, 97, 97, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    padding: 30px;
+}
+
+.login-admin-hash h2 {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: el messiri;
+    font-size: 25px
+}
+
+.login-admin-hash input {
+    margin-top: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    font-family: el messiri;
+}
+
+.login-admin-hash button {
+    width: 20%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #3CD363;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.login-admin-hash p {
+    color: #1bff54;
+    margin-top: 10px;
+}
+
+
+
 /* ----------------- Hero ----------------- */
 
 .hero-container {

@@ -1,6 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const navigate = useNavigate()
+
+
   return (
     <>
     <nav>
@@ -14,7 +19,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="right-nav">
-        <img src="src\assets\navbar\admin.png"/>
+        <img src="src\assets\navbar\admin.png" onClick={() => navigate('/LoginAdmin')}/>
       </div>
     </nav>
     </>
