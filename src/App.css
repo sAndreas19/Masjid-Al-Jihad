@@ -245,6 +245,171 @@ nav {
 
 
 
+/* ----------------- Admin ----------------- */
+
+.admin-body {
+    background: #FFFFFF;
+    height: fit-content;
+}
+
+.admin-body-container {
+    padding: 20px;
+    height: fit-content;
+}
+
+.admin-top {
+    text-align: center;
+    width: 100%;
+}
+
+.admin-top-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-top-date button {
+    padding: 7px 27px;
+    background: #30A34D;
+    color: #FFFFFF;
+    border: none;
+    font-family: el messiri;
+    font-weight: 500;
+    border-radius: 7px;
+    box-shadow: 0 3px 7px 0 rgb(29, 29, 29);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-top-date button:hover {
+    transform: scale(1.1);
+}
+
+.admin-top-date p {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.admin-top-title {
+    margin-top: 50px;
+}
+
+.admin-top-title h1 {
+    font-size: 55px;
+    font-family: el messiri;
+    font-weight: 800;
+    color: #0D4E14;
+}
+
+.admin-main {
+    margin-top: 100px;
+}
+
+.admin-main-panel-core {
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-main-panel-core h2 {
+    font-weight: 500;
+    font-family: el messiri;
+    color: #616161;
+    cursor: pointer;
+}
+
+.admin-main-panel hr {
+    color: #616161;
+}
+
+.admin-main-topic {
+    height: fit-content;
+    padding: 30px 20px;
+    width: 100%;
+}
+
+.admin-main-topic-artikel {
+    width: 100%;
+    height: fit-content;
+}
+
+.admin-main-topic-artikel-btn {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 80px;
+}
+
+.admin-main-topic-artikel-btn button {
+    padding: 10px 30px;
+    color: #FFFFFF;
+    background: #30A34D;
+    border: none;
+    border-radius: 5px;
+    font-family: el messiri;
+    font-size: 17px;
+    box-shadow: 0 3px 7px 0 rgb(29, 29, 29);
+    transition: 0.3s;
+}
+
+.admin-main-topic-artikel-btn button:hover {
+    transform: scale(1.1);
+}
+
+.admin-main-topic-artikel-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-main-topic-artikel-content-gambar-artikel {
+    border-radius: 20px;
+    max-width: 177px;
+    max-height: 133px;
+}
+
+.admin-main-topic-artikel-content h1 {
+    font-size: 35px;
+    font-family: el messiri;
+    max-width: 295px;
+    line-height: 1;
+}
+
+.admin-main-topic-artikel-content-control {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    align-items: center;
+}
+
+.admin-main-topic-artikel-content-control button {
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    background: #FBBC04;
+    font-weight: 700;
+    font-family: el messiri;
+    padding: 10px 45px;
+    box-shadow: 0 3px 7px 0 rgb(29, 29, 29);
+    transition: 0.3s;
+}
+
+.admin-main-topic-artikel-content-control button:hover {
+    transform: scale(1.1);
+}
+
+.admin-main-topic-artikel-content-control img {
+    max-width: 27px;
+    min-width: 27px;
+    transition: 0.3s;
+}
+
+.admin-main-topic-artikel-content-control img:hover {
+    transform: scale(1.1);
+}
+
+
+
 /* ----------------- Hero ----------------- */
 
 .hero-container {
