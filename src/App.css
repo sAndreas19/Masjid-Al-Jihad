@@ -110,11 +110,11 @@ nav {
     height: fit-content;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(45deg, #3CD363, #1bff54, #77ff00, #ccff13, #1bffb7);
-    background-size: 300% 300%;
-    animation: bg-color-rotate 10s linear infinite;
     text-align: center;
     align-items: center;
+    background: url('./assets/admin/login-page.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 @keyframes bg-color-rotate {
