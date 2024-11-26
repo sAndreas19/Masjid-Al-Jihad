@@ -46,7 +46,7 @@ nav {
 }
 
 .left-nav ul {
-    width: 75%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
 }
