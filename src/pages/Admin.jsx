@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ArticleAdmin from '../components/ArticleAdmin';
+import InfagAdmin from '../components/InfagAdmin';
+import PesanAdmin from '../components/PesanAdmin';
 
 const Admin = () => {
   const navigate = useNavigate();
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [activePage, setActivePage] = useState("ArticleAdmin");
 
   // Update waktu setiap detik
   useEffect(() => {
@@ -20,6 +23,16 @@ const Admin = () => {
     localStorage.removeItem('authtoken');
     navigate('/loginadmin')
   }
+
+  const handlePageChange = (page) => {
+    setActivePage(page); // Update state activePage
+  };
+
+  const pageComponents = {
+    ArticleAdmin: <ArticleAdmin />,
+    InfagAdmin: <InfagAdmin />,
+    PesanAdmin: <PesanAdmin />,
+  };
 
   return (
     <>
@@ -37,9 +50,9 @@ const Admin = () => {
         <div className="admin-main">
           <div className="admin-main-panel">
             <div className="admin-main-panel-core">
-              <h2 className='admin-main-panel-core-artikel'>Artikel</h2>
-              <h2 className='admin-main-panel-core-infaq'>Infaq</h2>
-              <h2 className='admin-main-panel-core-pesan'>Pesan</h2>
+              <h2 id="article" className='admin-main-panel-core-artikel' onClick={() => handlePageChange("ArticleAdmin")}>Artikel</h2>
+              <h2 id="infag" className='admin-main-panel-core-infaq' onClick={() => handlePageChange("InfagAdmin")}>Infaq</h2>
+              <h2 id="pesan" className='admin-main-panel-core-pesan' onClick={() => handlePageChange("PesanAdmin")}>Pesan</h2>
             </div>
             <hr />
           </div>
@@ -47,10 +60,7 @@ const Admin = () => {
 
             {/* Bagian Artikel */}
             <div className="admin-main-topic-artikel">
-              <div className="admin-main-topic-artikel-btn">
-              <button onClick={() => navigate('/tulisarticle')}>Tulis Artikel</button>
-              </div>
-              <ArticleAdmin/>
+              {pageComponents[activePage]}
             </div>
 
             {/* Bagian Infaq */}

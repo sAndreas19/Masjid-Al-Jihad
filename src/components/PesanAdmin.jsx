@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Konstanta untuk Local Storage
-const STORAGE_KEY = "ARTICLES_DATA";
+const STORAGE_KEY = "PESAN_DATA";
 
 // Komponen utama untuk Admin Artikel
-const ArticleAdmin = () => {
+const PesanAdmin = () => {
   const [articles, setArticles] = useState([]);
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ const ArticleAdmin = () => {
   return (
     <div>
       <div className="admin-main-topic-artikel-btn">
-        <button onClick={() => navigate("/tulisarticle")}>Tulis Artikel</button>
+        <button onClick={() => navigate("/tulisarticle")}>Tambahkan Pesan</button>
       </div>
       <div className="admin-main-topic-artikel">
       <div id="articlesContent" className="admin-main-topic-artikel">
@@ -59,7 +59,7 @@ const ArticleAdmin = () => {
             </div>
           ))
         ) : (
-          <p>Belum ada artikel.</p>
+          <p>Belum ada Pesan</p>
         )}
       </div>
       </div>
@@ -67,4 +67,4 @@ const ArticleAdmin = () => {
   );
 };
 
-export default ArticleAdmin;
+export default PesanAdmin;
