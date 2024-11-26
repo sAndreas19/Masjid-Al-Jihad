@@ -22,7 +22,8 @@ const Article = () => {
         </div>
         <div className="article-right">
           <div className="article-right-top">
-            <h1>Lihat artikel lainnya</h1>
+            <h1>Lihat artikel</h1><h1>lainnya</h1>
+            <br />
             <img src="src\assets\article-main\see button.png"/>
           </div>
         </div>

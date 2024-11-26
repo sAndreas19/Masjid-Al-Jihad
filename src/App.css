@@ -596,11 +596,12 @@ nav {
 
 .article-image-core-explain-top {
     text-align: left;
+    padding-left: 10px;
 }
 
 .article-image-core-explain-top h1 {
     font-size: 3.4rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     line-height: 1;
     margin-bottom: 10px;
     color: #FFFFFF;
@@ -612,6 +613,31 @@ nav {
 }
 
 .article-image-core-explain-bottom {
-    color: #D7D7D7  ;
+    text-align: right;
 }
 
+.article-image-core-explain-bottom button {
+    color: #000000;
+    padding: 10px 27px;
+    background: #FBBC04;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-family: el messiri;
+    box-shadow: 0 3px 7px 0 rgb(29, 29, 29);
+    transition: 0.3s;
+}
+
+.article-image-core-explain-bottom button:hover {
+    transform: scale(1.1)
+}
+
+.article-right-top {
+    text-align: left;
+}
+
+.article-right-top h1 {
+    font-family: el messiri;
+    font-size: 70px;
+    line-height: 1;
+}
