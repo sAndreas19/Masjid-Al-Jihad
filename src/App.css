@@ -544,3 +544,74 @@ nav {
     transform: scale(1.1);
 }
 
+
+
+/* ----------------- Article ----------------- */
+
+.article-body {
+    background: #FFFFFF;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+.article-container {
+    padding: 0 120px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-image-core {
+    max-width: 795px;
+    max-height: 474px;
+    overflow: hidden;
+    position: relative;
+}
+
+.article-image-core img {
+    width: 100%; /* Pastikan gambar sesuai dengan kontainer */
+    height: auto; /* Menjaga rasio gambar */
+    position: relative;
+    z-index: 1;
+}
+
+.article-image-core-explain {
+    background: linear-gradient(to top, #0D4E14, rgba(30, 180, 46, 0));
+    position: absolute; /* Supaya bisa menimpa */
+    bottom: 0; /* Menempel di bagian bawah kontainer */
+    left: 0; /* Mulai dari sisi kiri */
+    width: 100%; /* Menutupi seluruh lebar kontainer */
+    height: 100%;
+    z-index: 2;
+    display: flex; /* Untuk pengaturan isi */
+    flex-direction: column; /* Susun vertikal */
+    justify-content: flex-end; /* Beri jarak antara atas dan bawah */
+    padding: 1rem;
+}
+
+.article-image-core-explain-top {
+    text-align: left;
+}
+
+.article-image-core-explain-top h1 {
+    font-size: 3.4rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-family: el messiri;
+}
+
+.article-image-core-explain-top p {
+    color: #D7D7D7  ;
+}
+
+.article-image-core-explain-bottom {
+    color: #D7D7D7  ;
+}
+

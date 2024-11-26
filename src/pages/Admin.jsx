@@ -36,7 +36,7 @@ const Admin = () => {
             {/* Bagian Artikel */}
             <div className="admin-main-topic-artikel">
               <div className="admin-main-topic-artikel-btn">
-                <button>Tulis Artikel</button>
+                <button onClick={() => navigate('/tulisarticle')}>Tulis Artikel</button>
               </div>
               <div className="admin-main-topic-artikel-content">
                 <img className='admin-main-topic-artikel-content-gambar-artikel' src="src\assets\admin\Example Picture.png"/>
