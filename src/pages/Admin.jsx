@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ArticleAdmin from '../components/ArticleAdmin';
 
 const Admin = () => {
   const navigate = useNavigate();
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Update waktu setiap detik
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    // Membersihkan interval saat komponen di-unmount
+    return () => clearInterval(timer);
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('authtoken');
@@ -16,7 +28,7 @@ const Admin = () => {
         <div className="admin-top">
           <div className="admin-top-date">
             <button onClick={handleLogout}>Keluar</button>
-            <p>Minggu, 27 Oktober 2024</p>
+            <p>{currentTime.toLocaleDateString()}</p>
           </div>
           <div className="admin-top-title">
             <h1>السلام عليكم أيها المسؤول</h1>
@@ -36,26 +48,9 @@ const Admin = () => {
             {/* Bagian Artikel */}
             <div className="admin-main-topic-artikel">
               <div className="admin-main-topic-artikel-btn">
-                <button onClick={() => navigate('/tulisarticle')}>Tulis Artikel</button>
+              <button onClick={() => navigate('/tulisarticle')}>Tulis Artikel</button>
               </div>
-              <div className="admin-main-topic-artikel-content">
-                <img className='admin-main-topic-artikel-content-gambar-artikel' src="src\assets\admin\Example Picture.png"/>
-                <h1>Ini Contoh Judul Artikel</h1>
-                <h2>13 September 2024</h2>
-                <div className="admin-main-topic-artikel-content-control">
-                  <button>LIHAT</button>
-                  <img src="src\assets\admin\Trash.png"/>
-                </div>
-              </div>
-              <div className="admin-main-topic-artikel-content">
-                <img className='admin-main-topic-artikel-content-gambar-artikel' src="src\assets\admin\Example Picture.png"/>
-                <h1>Ini Contoh Judul Artikel</h1>
-                <h2>13 September 2024</h2>
-                <div className="admin-main-topic-artikel-content-control">
-                  <button>LIHAT</button>
-                  <img src="src\assets\admin\Trash.png"/>
-                </div>
-              </div>
+              <ArticleAdmin/>
             </div>
 
             {/* Bagian Infaq */}
