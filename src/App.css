@@ -641,3 +641,11 @@ nav {
     font-size: 70px;
     line-height: 1;
 }
+
+.article-right-top img {
+    transition: 0.3s;
+}
+
+.article-right-top img:hover {
+    transform: scale(1.1);
+}
