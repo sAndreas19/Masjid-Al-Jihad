@@ -80,6 +80,8 @@ nav {
 
 
 
+/* -------------------------------------------------- Bagian Login Admin -------------------------------------------------- */
+
 /* ----------------- Login Admin ----------------- */
 
 .login-admin-top {
@@ -110,11 +112,11 @@ nav {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    background: url('./assets/admin/login-page.jpeg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     text-align: center;
     align-items: center;
-    background: url('./assets/admin/login-page.jpeg');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
 }
 
 @keyframes bg-color-rotate {
@@ -244,6 +246,8 @@ nav {
 }
 
 
+
+/* -------------------------------------------------- Bagian Admin -------------------------------------------------- */
 
 /* ----------------- Admin ----------------- */
 
@@ -410,6 +414,182 @@ nav {
 
 
 
+/* ----------------- Tulis Article ----------------- */
+
+.tulisarticle-body {
+    background: #FFFFFF;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 20px 0;
+    /* background-color: rgb(255, 203, 203); */
+}
+
+.tulisarticle-container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.tulisarticle-top {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.tulisarticle-top button {
+    padding: 10px 27px;
+    background: #30A34D;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: el messiri;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 3px 7px 0 rgb(29, 29, 29);
+    transition: 0.3s;
+}
+
+.tulisarticle-top button:hover {
+    transform: scale(1.1);
+}
+
+.tulisarticle-main {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.tulisarticle-main-title {
+    padding: 20px 0;
+}
+
+.tulisarticle-main-title h1 {
+    color: #0D4E14;
+    font-size: 3rem;
+    font-family: el messiri;
+}
+
+.tulisarticle-main-core {
+    width: 100%;
+    text-align: left;
+}
+
+.tulisarticle-main-core-tanggal {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+.tulisarticle-main-core-tanggal h5 {
+    color: #0D4E14;
+    font-size: 1.3rem;
+    font-family: el messiri;
+}
+
+.tulisarticle-main-core-tanggal input {
+    text-align: center;
+    border: none;
+    background: none;
+    color: #000000;
+    font-size: 1.3rem;
+    font-family: el messiri;
+    font-weight: 700;
+}
+
+.tulisarticle-main-core-judul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.tulisarticle-main-core-judul h5 {
+    color: #0D4E14;
+    font-size: 1.3rem;
+    font-family: el messiri;
+    margin-bottom: 5px;
+}
+
+.tulisarticle-main-core-judul input {
+    border: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    width: 50%;
+    background: #D7D7D7;
+    color: #000000;
+    font-family: el messiri;
+    font-size: 1.2rem;
+}
+
+.tulisarticle-main-core-fotosampul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.tulisarticle-main-core-fotosampul h5 {
+    color: #0D4E14;
+    font-size: 1.3rem;
+    font-family: el messiri;
+    margin-bottom: 5px;
+}
+
+.tulisarticle-main-core-fotosampul input {
+    margin-bottom: 5px;
+}
+
+.tulisarticle-main-core-isikonten {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.tulisarticle-main-core-isikonten h5 {
+    color: #0D4E14;
+    font-size: 1.3rem;
+    font-family: el messiri;
+    margin-bottom: 5px;
+}
+
+.tulisarticle-main-core-isikonten textarea {
+    border: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: 500px;
+    background: #D7D7D7;
+    color: #000000;
+    font-family: el messiri;
+    font-size: 1.2rem;
+}
+
+.tulisarticle-main-core-btnsubmit {
+    text-align: left;
+    padding: 10px 0 50px 0;
+}
+
+.tulisarticle-main-core-btnsubmit button {
+    padding: 10px 27px;
+    background: #30A34D;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: el messiri;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 3px 7px 0 rgb(29, 29, 29);
+    transition: 0.3s;
+}
+
+.tulisarticle-main-core-btnsubmit button:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* -------------------------------------------------- Bagian Landing Page -------------------------------------------------- */
+
 /* ----------------- Hero ----------------- */
 
 .hero-container {
@@ -492,7 +672,7 @@ nav {
     padding: 30px;
     box-shadow: 0 0 5px rgb(29, 29, 29);
     border-radius: 10px;
-    min-width: 120px;
+    width: 120px;
     background: #FFFFFF;
     color: #616161;
     /* background: linear-gradient(to bottom, #3CD363, #30A34D); */
@@ -567,8 +747,8 @@ nav {
 }
 
 .article-image-core {
-    max-width: 795px;
-    max-height: 474px;
+    max-width: 729.58px;
+    max-height: 435px;
     overflow: hidden;
     position: relative;
 }
@@ -600,7 +780,7 @@ nav {
 }
 
 .article-image-core-explain-top h1 {
-    font-size: 3.4rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
     line-height: 1;
     margin-bottom: 10px;
@@ -610,6 +790,7 @@ nav {
 
 .article-image-core-explain-top p {
     color: #D7D7D7  ;
+    font-size: 0.8rem;
 }
 
 .article-image-core-explain-bottom {
@@ -620,6 +801,7 @@ nav {
     color: #000000;
     padding: 10px 27px;
     background: #FBBC04;
+    font-size: 0.8rem;
     border: none;
     border-radius: 30px;
     font-weight: 700;
@@ -634,11 +816,12 @@ nav {
 
 .article-right-top {
     text-align: left;
+    margin-left: 30px;
 }
 
 .article-right-top h1 {
     font-family: el messiri;
-    font-size: 70px;
+    font-size: 3.0rem;
     line-height: 1;
 }
 

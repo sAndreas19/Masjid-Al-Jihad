@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const TulisArticle = () => {
   const navigate = useNavigate();
   const STORAGE_KEY = "ARTICLES_DATA";
+  const [previewImage, setPreviewImage] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setPreviewImage(reader.result); // Simpan URL gambar
+      };
+      reader.readAsDataURL(file); // Membaca file sebagai Data URL
+    }
+  };
 
   // Fungsi untuk menyimpan artikel ke localStorage
   const handleSubmit = () => {
@@ -51,7 +63,7 @@ const TulisArticle = () => {
             <div className="tulisarticle-main-core">
               <div className="tulisarticle-main-core-tanggal">
                 <h5>Tanggal</h5>
-                <input type="text" placeholder="27 Oktober 2024" id="inputTanggal" />
+                <input type="text" id="inputTanggal" value={new Date().toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric", })} readOnly />
               </div>
               <div className="tulisarticle-main-core-judul">
                 <h5>Judul</h5>
@@ -59,7 +71,13 @@ const TulisArticle = () => {
               </div>
               <div className="tulisarticle-main-core-fotosampul">
                 <h5>Foto Sampul</h5>
-                <input type="text" id="inputImage" />
+                <input onChange={handleImageChange} type="file" accept=".jpg, .jpeg, .png" id="inputImage" />
+                {previewImage && (
+                  <div className="image-preview">
+                    <h5>Pratinjau Gambar:</h5>
+                    <img src={previewImage} alt="Pratinjau" style={{ maxWidth: "100%", marginTop: "5px" }} />
+                  </div>
+                )}
               </div>
               <div className="tulisarticle-main-core-isikonten">
                 <h5>Isi Konten</h5>
