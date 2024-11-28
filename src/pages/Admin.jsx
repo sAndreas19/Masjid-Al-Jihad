@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ArticleAdmin from '../components/ArticleAdmin';
-import InfagAdmin from '../components/InfagAdmin';
+import InfaqAdmin from '../components/InfaqAdmin';
 import PesanAdmin from '../components/PesanAdmin';
 
 const Admin = () => {
@@ -30,7 +30,7 @@ const Admin = () => {
 
   const pageComponents = {
     ArticleAdmin: <ArticleAdmin />,
-    InfagAdmin: <InfagAdmin />,
+    InfaqAdmin: <InfaqAdmin />,
     PesanAdmin: <PesanAdmin />,
   };
 
@@ -51,7 +51,7 @@ const Admin = () => {
           <div className="admin-main-panel">
             <div className="admin-main-panel-core">
               <h2 id="article" className='admin-main-panel-core-artikel' onClick={() => handlePageChange("ArticleAdmin")}>Artikel</h2>
-              <h2 id="infag" className='admin-main-panel-core-infaq' onClick={() => handlePageChange("InfagAdmin")}>Infaq</h2>
+              <h2 id="infaq" className='admin-main-panel-core-Infaq' onClick={() => handlePageChange("InfaqAdmin")}>Infaq</h2>
               <h2 id="pesan" className='admin-main-panel-core-pesan' onClick={() => handlePageChange("PesanAdmin")}>Pesan</h2>
             </div>
             <hr />

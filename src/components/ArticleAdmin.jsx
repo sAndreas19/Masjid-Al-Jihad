@@ -1,38 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAllArticles, deleteArticle } from "../data/article-idb";
 
-// Konstanta untuk Local Storage
-const STORAGE_KEY = "ARTICLES_DATA";
-
-// Komponen utama untuk Admin Artikel
 const ArticleAdmin = () => {
   const [articles, setArticles] = useState([]);
   const navigate = useNavigate();
 
-  // Fungsi untuk memuat data dari localStorage
-  const loadArticles = () => {
-    const storedArticles = localStorage.getItem(STORAGE_KEY);
-    if (storedArticles) {
-      setArticles(JSON.parse(storedArticles));
-    }
-  };
-
-  // Fungsi untuk menyimpan data ke localStorage
-  const saveArticles = (updatedArticles) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedArticles));
-    setArticles(updatedArticles);
-  };
-
-  // Fungsi untuk menghapus artikel
-  const removeArticle = (id) => {
-    const updatedArticles = articles.filter((article) => article.id !== id);
-    saveArticles(updatedArticles);
-  };
-
-  // Memuat data saat komponen di-mount
   useEffect(() => {
-    loadArticles();
+    const fetchArticles = async () => {
+      const articlesFromDB = await getAllArticles();
+      setArticles(articlesFromDB);
+    };
+    fetchArticles();
   }, []);
+
+  const handleDelete = async (id) => {
+    await deleteArticle(id);
+    setArticles(articles.filter((article) => article.id !== id));
+  };
 
   return (
     <div>
@@ -40,28 +25,28 @@ const ArticleAdmin = () => {
         <button onClick={() => navigate("/tulisarticle")}>Tulis Artikel</button>
       </div>
       <div className="admin-main-topic-artikel">
-      <div id="articlesContent" className="admin-main-topic-artikel">
         {articles.length > 0 ? (
           articles.map((article) => (
             <div key={article.id} className="admin-main-topic-artikel-content">
               <img
-                src={article.image}
+                src={URL.createObjectURL(article.image)}
                 alt={article.title}
                 className="admin-main-topic-artikel-content-gambar-artikel"
               />
               <h1>{article.title}</h1>
               <h2>{article.date}</h2>
-              {/* <p>{article.content}</p> */}
               <div className="admin-main-topic-artikel-content-control">
-                {/* <button onClick={() => removeArticle(article.id)}>Hapus</button> */}
-                <img onClick={() => removeArticle(article.id)} src="src\assets\admin\Trash.png"/>
+                <img
+                  onClick={() => handleDelete(article.id)}
+                  src="src/assets/admin/Trash.png"
+                  alt="Hapus"
+                />
               </div>
             </div>
           ))
         ) : (
           <p>Belum ada artikel.</p>
         )}
-      </div>
       </div>
     </div>
   );
