@@ -8,6 +8,7 @@ const Admin = () => {
   const navigate = useNavigate();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [activePage, setActivePage] = useState("ArticleAdmin");
+  const [activePanel, setActivePanel] = useState("article");
 
   // Update waktu setiap detik
   useEffect(() => {
@@ -21,11 +22,12 @@ const Admin = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('authtoken');
-    navigate('/loginadmin')
-  }
+    navigate('/loginadmin');
+  };
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page, panel) => {
     setActivePage(page); // Update state activePage
+    setActivePanel(panel); // Update state activePanel
   };
 
   const pageComponents = {
@@ -36,38 +38,59 @@ const Admin = () => {
 
   return (
     <>
-    <div className="admin-body">
-      <div className="admin-body-container">
-        <div className="admin-top">
-          <div className="admin-top-date">
-            <button onClick={handleLogout}>Keluar</button>
-            <p>{currentTime.toLocaleDateString()}</p>
-          </div>
-          <div className="admin-top-title">
-            <h1>السلام عليكم أيها المسؤول</h1>
-          </div>
-        </div>
-        <div className="admin-main">
-          <div className="admin-main-panel">
-            <div className="admin-main-panel-core">
-              <h2 id="article" className='admin-main-panel-core-artikel' onClick={() => handlePageChange("ArticleAdmin")}>Artikel</h2>
-              <h2 id="infaq" className='admin-main-panel-core-Infaq' onClick={() => handlePageChange("InfaqAdmin")}>Infaq</h2>
-              <h2 id="pesan" className='admin-main-panel-core-pesan' onClick={() => handlePageChange("PesanAdmin")}>Pesan</h2>
+      <div className="admin-body">
+        <div className="admin-body-container">
+          <div className="admin-top">
+            <div className="admin-top-date">
+              <button onClick={handleLogout}>Keluar</button>
+              <p>{currentTime.toLocaleDateString()}</p>
             </div>
-            <hr />
-          </div>
-          <div className="admin-main-topic">
-
-            {/* Bagian Artikel */}
-            <div className="admin-main-topic-artikel">
-              {pageComponents[activePage]}
+            <div className="admin-top-title">
+              <h1>السلام عليكم أيها المسؤول</h1>
             </div>
-
-            {/* Bagian Infaq */}
+          </div>
+          <div className="admin-main">
+            <div className="admin-main-panel">
+              <div className="admin-main-panel-core">
+                <h2
+                  id="article"
+                  className={`admin-main-panel-core-artikel ${
+                    activePanel === "article" ? "active" : ""
+                  }`}
+                  onClick={() => handlePageChange("ArticleAdmin", "article")}
+                >
+                  Artikel
+                </h2>
+                <h2
+                  id="infaq"
+                  className={`admin-main-panel-core-infaq ${
+                    activePanel === "infaq" ? "active" : ""
+                  }`}
+                  onClick={() => handlePageChange("InfaqAdmin", "infaq")}
+                >
+                  Infaq
+                </h2>
+                <h2
+                  id="pesan"
+                  className={`admin-main-panel-core-pesan ${
+                    activePanel === "pesan" ? "active" : ""
+                  }`}
+                  onClick={() => handlePageChange("PesanAdmin", "pesan")}
+                >
+                  Pesan
+                </h2>
+              </div>
+              <hr />
+            </div>
+            <div className="admin-main-topic">
+              {/* Bagian Artikel */}
+              <div className="admin-main-topic-artikel">
+                {pageComponents[activePage]}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 };

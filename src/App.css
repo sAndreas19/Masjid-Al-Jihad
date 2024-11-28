@@ -315,10 +315,19 @@ nav {
 }
 
 .admin-main-panel-core h2 {
-    font-weight: 500;
+    font-weight: 700;
     font-family: el messiri;
     color: #616161;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-main-panel-core h2:hover {
+    transform: scale(1.1);
+}
+
+.admin-main-panel-core h2.active {
+    color: #30A34D;
 }
 
 .admin-main-panel hr {
@@ -474,15 +483,18 @@ nav {
 
 .tulisarticle-main-core-tanggal, .update-infaq-main-core-tanggal {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 25%;
     margin-bottom: 20px;
+    /* align-items: center; */
 }
 
 .tulisarticle-main-core-tanggal h5, .update-infaq-main-core-tanggal h5 {
     color: #0D4E14;
     font-size: 1.3rem;
     font-family: el messiri;
+    margin-bottom: 5px;
 }
 
 .tulisarticle-main-core-tanggal input, .update-infaq-main-core-tanggal input {
@@ -493,8 +505,9 @@ nav {
     font-size: 1.3rem;
     font-family: el messiri;
     font-weight: 700;
-    margin-left: 16px;
+    /* margin-left: 16px; */
     border-radius: 4px;
+    padding: 15px 10px;
 }
 
 .tulisarticle-main-core-judul, .update-infaq-main-core-jumlah {
