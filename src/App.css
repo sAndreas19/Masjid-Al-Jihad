@@ -536,6 +536,7 @@ nav {
 
 .tulisarticle-main-core-fotosampul input {
     margin-bottom: 5px;
+    width: fit-content  ;
 }
 
 .tulisarticle-main-core-isikonten {
