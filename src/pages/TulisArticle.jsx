@@ -1,30 +1,24 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { saveArticle } from "../data/article-idb";
 
 const TulisArticle = () => {
   const navigate = useNavigate();
-  const STORAGE_KEY = "ARTICLES_DATA";
-  const [previewImage, setPreviewImage] = useState(null);
+  const [imageFile, setImageFile] = useState(null);
+  const [date, setDate] = useState(""); // State untuk tanggal
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setPreviewImage(reader.result); // Simpan URL gambar
-      };
-      reader.readAsDataURL(file); // Membaca file sebagai Data URL
+      setImageFile(file);
     }
   };
 
-  // Fungsi untuk menyimpan artikel ke localStorage
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const title = document.getElementById("inputJudul").value;
-    const image = document.getElementById("inputImage").value;
-    const date = document.getElementById("inputTanggal").value;
     const content = document.getElementById("inputContent").value;
 
-    if (!title || !image || !date || !content) {
+    if (!title || !imageFile || !date || !content) {
       alert("Harap isi semua data!");
       return;
     }
@@ -32,65 +26,60 @@ const TulisArticle = () => {
     const newArticle = {
       id: +new Date(),
       title,
-      image,
+      image: imageFile, // Simpan gambar sebagai Blob
       date,
       content,
     };
 
-    // Ambil artikel yang sudah ada dari localStorage
-    const storedArticles = localStorage.getItem(STORAGE_KEY);
-    const articles = storedArticles ? JSON.parse(storedArticles) : [];
-
-    // Tambahkan artikel baru ke array dan simpan ke localStorage
-    articles.push(newArticle);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(articles));
-
-    // Navigasi kembali ke halaman admin
+    await saveArticle(newArticle);
     navigate("/admin");
   };
 
   return (
-    <>
-      <div className="tulisarticle-body">
-        <div className="tulisarticle-container">
-          <div className="tulisarticle-top">
-            <button onClick={() => navigate("/admin")}>Kembali</button>
+    <div className="tulisarticle-body">
+      <div className="tulisarticle-container">
+        <div className="tulisarticle-top">
+          <button onClick={() => navigate("/admin")}>Kembali</button>
+        </div>
+        <div className="tulisarticle-main">
+          <div className="tulisarticle-main-title">
+            <h1>Tulis Artikel</h1>
           </div>
-          <div className="tulisarticle-main">
-            <div className="tulisarticle-main-title">
-              <h1>Tulis Artikel</h1>
+          <div className="tulisarticle-main-core">
+            <div className="tulisarticle-main-core-tanggal">
+              <h5>Tanggal</h5>
+              <input
+                type="text"
+                id="inputTanggal"
+                value={date}
+                onChange={(e) => setDate(e.target.value)} // Update state tanggal
+                placeholder="DD/MM/YYYY"
+              />
             </div>
-            <div className="tulisarticle-main-core">
-              <div className="tulisarticle-main-core-tanggal">
-                <h5>Tanggal</h5>
-                <input type="text" id="inputTanggal" value={new Date().toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric", })} readOnly />
-              </div>
-              <div className="tulisarticle-main-core-judul">
-                <h5>Judul</h5>
-                <input type="text" id="inputJudul" />
-              </div>
-              <div className="tulisarticle-main-core-fotosampul">
-                <h5>Foto Sampul</h5>
-                <input onChange={handleImageChange} type="file" accept=".jpg, .jpeg, .png" id="inputImage" />
-                {previewImage && (
-                  <div className="image-preview">
-                    <h5>Pratinjau Gambar:</h5>
-                    <img src={previewImage} alt="Pratinjau" style={{ maxWidth: "100%", marginTop: "5px" }} />
-                  </div>
-                )}
-              </div>
-              <div className="tulisarticle-main-core-isikonten">
-                <h5>Isi Konten</h5>
-                <textarea id="inputContent" />
-              </div>
-              <div id="inputArticle" className="tulisarticle-main-core-btnsubmit">
-                <button onClick={handleSubmit}>Submit</button>
-              </div>
+            <div className="tulisarticle-main-core-judul">
+              <h5>Judul</h5>
+              <input type="text" id="inputJudul" placeholder="Masukkan judul artikel" />
+            </div>
+            <div className="tulisarticle-main-core-fotosampul">
+              <h5>Foto Sampul</h5>
+              <input
+                type="file"
+                accept=".jpg, .jpeg, .png"
+                id="inputImage"
+                onChange={handleImageChange}
+              />
+            </div>
+            <div className="tulisarticle-main-core-isikonten">
+              <h5>Isi Konten</h5>
+              <textarea id="inputContent" placeholder="Masukkan isi artikel" />
+            </div>
+            <div id="inputArticle" className="tulisarticle-main-core-btnsubmit">
+              <button onClick={handleSubmit}>Submit</button>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

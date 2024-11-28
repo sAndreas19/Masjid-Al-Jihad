@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage'
 import LoginAdmin from './pages/LoginAdmin';
 import Admin from './pages/Admin';
 import TulisArticle from './pages/TulisArticle';
+import UpdateInfaq from './pages/UpdateInfaq';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
 
         <Route path='/admin' element={<PrivateRoute><Admin /></PrivateRoute>} />
         <Route path='/tulisarticle' element={<PrivateRoute><TulisArticle/></PrivateRoute>} />
+        <Route path='/updateinfaq' element={<PrivateRoute><UpdateInfaq/></PrivateRoute>}/>
       </Routes>
     </Router>
   )

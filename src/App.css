@@ -336,13 +336,13 @@ nav {
     height: fit-content;
 }
 
-.admin-main-topic-artikel-btn {
+.admin-main-topic-artikel-btn, .admin-main-topic-infaq-btn {
     width: fit-content;
     height: fit-content;
     margin-bottom: 80px;
 }
 
-.admin-main-topic-artikel-btn button {
+.admin-main-topic-artikel-btn button, .admin-main-topic-infaq-btn button {
     padding: 10px 30px;
     color: #FFFFFF;
     background: #30A34D;
@@ -354,7 +354,7 @@ nav {
     transition: 0.3s;
 }
 
-.admin-main-topic-artikel-btn button:hover {
+.admin-main-topic-artikel-btn button:hover, .admin-main-topic-infaq-btn button:hover {
     transform: scale(1.1);
 }
 
@@ -416,7 +416,7 @@ nav {
 
 /* ----------------- Tulis Article ----------------- */
 
-.tulisarticle-body {
+.tulisarticle-body, .update-infaq-body{
     background: #FFFFFF;
     width: 100%;
     height: 100vh;
@@ -425,17 +425,17 @@ nav {
     /* background-color: rgb(255, 203, 203); */
 }
 
-.tulisarticle-container {
+.tulisarticle-container, .update-infaq-container {
     width: 100%;
     padding: 0 20px;
 }
 
-.tulisarticle-top {
+.tulisarticle-top, .update-infaq-top {
     text-align: left;
     margin-bottom: 50px;
 }
 
-.tulisarticle-top button {
+.tulisarticle-top button, .update-infaq-top button {
     padding: 10px 27px;
     background: #30A34D;
     border: none;
@@ -448,68 +448,70 @@ nav {
     transition: 0.3s;
 }
 
-.tulisarticle-top button:hover {
+.tulisarticle-top button:hover, .update-infaq-top button:hover {
     transform: scale(1.1);
 }
 
-.tulisarticle-main {
+.tulisarticle-main, .update-infaq-main {
     width: 100%;
     padding: 0 30px;
 }
 
-.tulisarticle-main-title {
+.tulisarticle-main-title, .update-infaq-main-title {
     padding: 20px 0;
 }
 
-.tulisarticle-main-title h1 {
+.tulisarticle-main-title h1, .update-infaq-main-title h1 {
     color: #0D4E14;
     font-size: 3rem;
     font-family: el messiri;
 }
 
-.tulisarticle-main-core {
+.tulisarticle-main-core, .update-infaq-main-core {
     width: 100%;
     text-align: left;
 }
 
-.tulisarticle-main-core-tanggal {
+.tulisarticle-main-core-tanggal, .update-infaq-main-core-tanggal {
     display: flex;
     justify-content: space-between;
     width: 25%;
     margin-bottom: 20px;
 }
 
-.tulisarticle-main-core-tanggal h5 {
+.tulisarticle-main-core-tanggal h5, .update-infaq-main-core-tanggal h5 {
     color: #0D4E14;
     font-size: 1.3rem;
     font-family: el messiri;
 }
 
-.tulisarticle-main-core-tanggal input {
+.tulisarticle-main-core-tanggal input, .update-infaq-main-core-tanggal input {
     text-align: center;
     border: none;
-    background: none;
+    background: #D7D7D7;
     color: #000000;
     font-size: 1.3rem;
     font-family: el messiri;
     font-weight: 700;
+    margin-left: 16px;
+    border-radius: 4px;
 }
 
-.tulisarticle-main-core-judul {
+.tulisarticle-main-core-judul, .update-infaq-main-core-jumlah {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.tulisarticle-main-core-judul h5 {
+.tulisarticle-main-core-judul h5 , .update-infaq-main-core-jumlah h5{
     color: #0D4E14;
     font-size: 1.3rem;
     font-family: el messiri;
     margin-bottom: 5px;
 }
 
-.tulisarticle-main-core-judul input {
+.tulisarticle-main-core-judul input, .update-infaq-main-core-jumlah input {
     border: none;
     padding: 15px 10px;
     border-radius: 5px;
@@ -539,14 +541,14 @@ nav {
     width: fit-content  ;
 }
 
-.tulisarticle-main-core-isikonten {
+.tulisarticle-main-core-isikonten, .update-infaq-main-core-dari {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.tulisarticle-main-core-isikonten h5 {
+.tulisarticle-main-core-isikonten h5, .update-infaq-main-core-dari h5 {
     color: #0D4E14;
     font-size: 1.3rem;
     font-family: el messiri;
@@ -565,12 +567,22 @@ nav {
     font-size: 1.2rem;
 }
 
-.tulisarticle-main-core-btnsubmit {
+.update-infaq-main-core-dari input {
+    border: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    background: #D7D7D7;
+    color: #000000;
+    font-family: el messiri;
+    font-size: 1.2rem;
+}
+
+.tulisarticle-main-core-btnsubmit, .update-infaq-main-core-btnsubmit {
     text-align: left;
     padding: 10px 0 50px 0;
 }
 
-.tulisarticle-main-core-btnsubmit button {
+.tulisarticle-main-core-btnsubmit button, .update-infaq-main-core-btnsubmit button {
     padding: 10px 27px;
     background: #30A34D;
     border: none;
@@ -583,7 +595,7 @@ nav {
     transition: 0.3s;
 }
 
-.tulisarticle-main-core-btnsubmit button:hover {
+.tulisarticle-main-core-btnsubmit button:hover, .update-infaq-main-core-btnsubmit button:hover {
     transform: scale(1.1);
 }
 
@@ -832,4 +844,61 @@ nav {
 
 .article-right-top img:hover {
     transform: scale(1.1);
+}
+
+/* Table */
+/* Responsif tabel */
+.responsive-table {
+  width: 100%; /* Tabel memenuhi lebar container */
+  border-collapse: collapse; /* Menghilangkan gap antar sel */
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Gaya header tabel */
+.responsive-table thead {
+  background-color: #28a745; /* Warna hijau */
+  color: white; /* Warna teks putih */
+}
+
+/* Border dengan gaya double */
+.responsive-table th,
+.responsive-table td {
+  border: 2px double #ddd; /* Warna abu-abu */
+  padding: 12px; /* Jarak dalam sel */
+}
+
+/* Gaya baris */
+.responsive-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Warna abu-abu muda */
+}
+
+.responsive-table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Warna putih */
+}
+
+/* Tabel fit secara responsif */
+@media screen and (max-width: 768px) {
+  .responsive-table {
+    font-size: 14px; /* Ukuran font lebih kecil pada layar kecil */
+  }
+
+  .responsive-table th, .responsive-table td {
+    padding: 8px; /* Padding lebih kecil pada layar kecil */
+  }
+}
+
+/* Tombol hapus */
+.delete-button {
+  background-color: #dc3545; /* Warna merah */
+  color: white; /* Teks putih */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Warna merah lebih gelap saat hover */
 }
