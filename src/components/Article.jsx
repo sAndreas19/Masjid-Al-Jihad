@@ -10,8 +10,8 @@ const Article = () => {
             <img src="src\assets\article-main\patuh.png"/>
             <div className="article-image-core-explain">
               <div className="article-image-core-explain-top">
-                <h1>Masjid Al-Jihad kini menghadirkan artikel bagi jama'ah untuk menambah wawasan</h1>
-                <p>SEPTEMBER 2024</p>
+                <h1>Tambah wawasanmu dengan membaca artikel kami</h1>
+                <p>Al-JIHAD ARTICLE</p>
               </div>
               <br />
               <div className="article-image-core-explain-bottom">

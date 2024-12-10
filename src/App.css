@@ -861,6 +861,174 @@ nav {
 
 
 
+/* ----------------- Infaq User ----------------- */
+
+.infaquser-body {
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+    /* Layer 1: Gradient */
+    background: linear-gradient(to right, rgba(13, 78, 20, 1) 0%, rgba(30, 180, 46, 0) 100%),
+    /* Layer 2: Background Image */
+    url('src/assets/infaquser/Shadaqah.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.infaquser-container {
+    padding: 150px 120px;
+    width: 100%;
+}
+
+.infaquser-container h1 {
+    font-size: 5rem;
+    font-family: el messiri;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+.infaquser-container h2 {
+    font-family: el messiri;
+    color: #FFFFFF;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 2.7rem;
+}
+
+.infaquser-container button {
+    color: #FFFFFF;
+    padding: 19px 50px;
+    font-family: el messiri;
+    background: none;
+    border: solid 2px #FBBC04;
+    border-radius: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.infaquser-container button:hover {
+    transform: scale(1.1);
+    background: #FBBC04;
+    color: #000000;
+    box-shadow: 0 3px 11px 0 rgb(29, 29, 29);
+}
+
+/* Overlay Styles */
+.infaquser-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.infaquser-overlay-content {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.infaquser-overlay-content h3 {
+    font-family: el messiri;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.infaquser-account-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.infaquser-account-input {
+    width: 75%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    color: #333;
+    cursor: not-allowed;
+    text-align: center;
+    align-items: center;
+}
+
+.infaquser-copy-btn {
+    background: #FBBC04;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.infaquser-copy-btn:hover {
+    background: #e0a903;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.infaquser-overlay-content-head {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.infaquser-close-btn {
+    /* position: absolute;
+    top: 10px;
+    right: 10px; */
+    align-self: flex-end;
+    background: #ff4c4c;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infaquser-copy-notification {
+    color: #28a745;
+    font-family: el messiri;
+    margin-top: 10px;
+    font-size: 1rem;
+    animation: fade-in 0.3s;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* -------------------------------------------------- Bagian Profil Page -------------------------------------------------- */
 
 /* ----------------- Profil ----------------- */
 
@@ -962,6 +1130,7 @@ nav {
 }
 
 
+/* -------------------------------------------------- Bagian Article Page -------------------------------------------------- */
 
 /* ----------------- Article Page ----------------- */
 
