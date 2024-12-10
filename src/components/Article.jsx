@@ -10,12 +10,12 @@ const Article = () => {
             <img src="src\assets\article-main\patuh.png"/>
             <div className="article-image-core-explain">
               <div className="article-image-core-explain-top">
-                <h1>Keutamaan berbakti kepada orang tua</h1>
+                <h1>Masjid Al-Jihad kini menghadirkan artikel bagi jama'ah untuk menambah wawasan</h1>
                 <p>SEPTEMBER 2024</p>
               </div>
               <br />
               <div className="article-image-core-explain-bottom">
-                <button>LIHAT ARTIKEL</button>
+                <button>LIHAT SEMUA ARTIKEL</button>
               </div>
             </div>
           </div>
