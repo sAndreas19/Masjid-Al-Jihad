@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Location from '../components/Location'
 import Article from '../components/Article'
 import InfaqUser from '../components/InfaqUser'
+import ContactUser from '../components/ContactUser'
 
 const LandingPage = () => {
   return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
     <Location/>
     <Article/>
     <InfaqUser/>
+    <ContactUser/>
     </>
   )
 }

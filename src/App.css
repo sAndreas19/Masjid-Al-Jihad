@@ -943,7 +943,7 @@ nav {
     font-family: el messiri;
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #000000;
+    color: #0D4E14;
 }
 
 .infaquser-account-info {
@@ -953,17 +953,18 @@ nav {
     margin-bottom: 20px;
 }
 
-.infaquser-account-input {
+.infaquser-account-info input {
     width: 75%;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background: #f9f9f9;
-    color: #333;
+    background: #F9F9F9;
+    color: #000000;
     cursor: not-allowed;
     text-align: center;
     align-items: center;
+    font-family: el messiri;
 }
 
 .infaquser-copy-btn {
@@ -971,22 +972,26 @@ nav {
     color: #000000;
     border: none;
     border-radius: 8px;
-    padding: 10px 15px;
+    padding: 10px 10px 5px 10px;
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .infaquser-copy-btn:hover {
-    background: #e0a903;
+    background: #E0A903;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.infaquser-copy-btn img {
+    width: 27px;
 }
 
 .infaquser-overlay-content-head {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .infaquser-close-btn {
@@ -998,13 +1003,23 @@ nav {
     color: #ffffff;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.infaquser-close-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.infaquser-close-btn:hover {
+    transform: scale(1.1);
 }
 
 .infaquser-copy-notification {
@@ -1025,6 +1040,111 @@ nav {
     }
 }
 
+
+
+/* ----------------- Contact Message ----------------- */
+
+.contactuser-body {
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+    background: linear-gradient(130deg, #FFFFFF 50%, #0D4E14 50%);
+}
+
+.contactuser-container {
+    width: 100%;
+    padding: 70px 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+/* .contactuser-left-row {
+    padding-right: 100px;
+} */
+
+.contactuser-left-row h1 {
+    font-size: 6.5rem;
+    font-weight: 700;
+    color: #0D4E14;
+    font-family: el messiri;
+}
+
+.contactuser-left-row form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactuser-left-row form input {
+    margin-bottom: 37px;
+    background: none;
+    border: none;
+    border-bottom: solid 1px #616161;
+    padding: 7px 10px;
+    font-family: el messiri;
+    font-size: 20px;
+}
+
+.contactuser-left-row form input::placeholder {
+    font-family: el messiri;
+    font-size: 20px;
+    padding: 0;
+}
+
+.contactuser-left-row button {
+    margin-top: 37px;
+    padding: 10px 45px;
+    border-radius: 50px;
+    border: none;
+    background: #FBBC04;
+    color: #000000;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 3px 7px 0 rgb(29, 29, 29);
+    font-family: el messiri;
+    transition: 0.3s;
+}
+
+.contactuser-left-row button:hover {
+    transform: scale(1.1);
+}
+
+.contactuser-right-row {
+    height: auto;
+    /* width: 40%; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 240px;
+    text-align: center;
+    align-items: center;
+}
+
+.contactuser-right-row-sosmed {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
+.contactuser-right-row-sosmed img {
+    max-width: 51px;
+    transition: 0.3s;
+}
+
+.contactuser-right-row-sosmed img:hover {
+    transform: scale(1.1);
+}
+
+.contactuser-right-row-sosmed h3 {
+    font-family: el messiri;
+    color: #FFFFFF;
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: 500;
+}
 
 
 

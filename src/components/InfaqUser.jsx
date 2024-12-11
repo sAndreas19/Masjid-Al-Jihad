@@ -28,18 +28,18 @@ const InfaqUser = () => {
         <div className="infaquser-overlay">
           <div className="infaquser-overlay-content">
             <div className="infaquser-overlay-content-head">
-                <button className="infaquser-close-btn" onClick={() => setIsOverlayOpen(false)}>X</button>
+                <button className="infaquser-close-btn" onClick={() => setIsOverlayOpen(false)}><img src='src\assets\infaquser\Close.png'></img></button>
             </div>
             <h3>Nomor Rekening Infaq</h3>
             <div className="infaquser-account-info">
               <input
                 type="text"
-                value="9236593409189"
+                value="12345678901234567"
                 readOnly
                 className="account-input"
               />
               <button className="infaquser-copy-btn" onClick={handleCopy}>
-                Auto Copy
+                <img src="src\assets\infaquser\Copy.png"/>
               </button>
             </div>
             {copySuccess && <div className="infaquser-copy-notification">Nomor Rekening Berhasil Disalin!</div>}
