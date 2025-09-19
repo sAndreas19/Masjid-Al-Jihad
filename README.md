@@ -1,4 +1,5 @@
 🕌 Sistem Informasi Jadwal Ibadah & Kegiatan Masjid Al-Jihad Kota Medan
+![WhatsApp Image 2025-09-19 at 11 25 10_76525527](https://github.com/user-attachments/assets/b27db7be-60e4-4cac-8d39-205e6b3ed6a6)
 
 Website resmi berbasis React.js & Node.js untuk membantu pengurus Masjid Al-Jihad dalam menyampaikan jadwal ibadah, kegiatan keagamaan, serta pengumuman kepada jamaah secara efisien, cepat, dan mudah diakses.
 
